@@ -1,23 +1,4 @@
 "use strict"
-
-// let data = {
-//    non: "Lub Lorry", // kle a ka san giymè
-//    "siyati": "Lamysère", // kle a ka nan mitan giymè
-//    "kou": "JavaScript",
-//    total: 4, // valè a ka antye, oubyen nenpòt lòt tip done ki ekziste,
-// }
-
-// let moun = {
-//   non: "Jean Bernard Thomas",
-//   datKreye: Date.now(), //  Dat nan JavaScript
-//   datNesans: new Date("1984-06-25"),
-//   totalMen: 2,
-//   totalPye: 2,
-// }
-
-// let dat = Date.now()
-// alert(moun['datKreye']);
-//
 const balistik = {
   _alph: 'abcdefghijklmnopqrstuvwxyz',
   _salt: "Ux00",
@@ -29,18 +10,9 @@ const balistik = {
 
           for(l of str){
 
-                // if(this.isLower(l)){
-
-                //     a.push(this._alph.indexOf(l));
-
-                // }else{
-
-                //     a.push(this.isUpper(l));                                
-
-                // }
                       if(!this._alph.includes(l.toLowerCase()) && l!="-" && l!=" "){
 
-                        return this.ValueError(l,"karaktè sa pa nan alfabè anglè a. ");
+                        return this.ValueError(l,"the English alphabet does not contain this letter");
                                       
                       }else if(l=="-"){
 
@@ -98,7 +70,6 @@ LengthError:function(message){
 
           a.shift();
           a.pop();
-          //console.log(a);
           for(l of a ){
 
               if((l.length==3 || l[0]==0) && l.length==2){
@@ -119,8 +90,6 @@ LengthError:function(message){
                       
                     i.push(this._alph[parseInt(l)]);
                 }
-
-            // this.islLower(l) ? i.push(this._alph[parseInt(l)]):i.push(this._alph[parseInt(l)].toUpperCase());
           }
             
             let k=i.join("")
@@ -128,11 +97,11 @@ LengthError:function(message){
           if(str.split('.')[0]!=this._salt){
 
                   
-                    return this.SaltError("pwogram nan pa rekonet kriptaj sa");
+                    return this.SaltError("unacknowledged coding");
 
               }else if(str.split('.')[str.split('.').length - 1]!=i.length){
 
-                    return this.LengthError("longe yo pa koresponn");
+                    return this.LengthError("length does not match");
               
               }
           
@@ -141,8 +110,6 @@ LengthError:function(message){
 
   },
   isLower: function (letter){
-
-//le mwen mete return nan li pa condition li poze let la en minis egal ak let la natirel, lap toujou retounen sam te defini nan return nan, sa ki vin koz fok mwen mete condition an
             if(letter.toLowerCase() === letter){
 
                 return true;
@@ -165,39 +132,6 @@ LengthError:function(message){
           }
 
 }
-let va="ole - ola-Football";
-let bal=balistik.encrypt(va);
-console.log(balistik.encrypt(va));
-//console.log(balistik.ValueError('l','ok'));
-//console.log(balistik.isLower('n'))
-console.log(balistik.decrypt(bal));
-//console.log(bal);
-//console.log(balistik.encrypt(va));
-//console.log(balistik._alph[parseInt('0')].toUpperCase());
-//console.log(balistik.decrypt("Ux00.13.8.2.14.3.4.12.7"));
-
-
-
-// let _alph='abcdefghijklmnopqrstuvwxy';
-
-// let al='ale';
-
-// let a=[];
-// let l;
-// let _salt="Ux00";
-
-// for(l of al){
-
-// 	a+=_alph.indexOf(l)+"";
-
-// }
-
-
-// alert(a);
-
-
-
-//alert(_alph.indexOf('a'));
 
 
 
